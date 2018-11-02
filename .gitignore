@@ -29,3 +29,4 @@ Cartfile.resolved
 !.gitkeep
 .DS_Store
 *.generated.swift
+fastlane/test_output/
