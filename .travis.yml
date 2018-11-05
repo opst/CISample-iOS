@@ -1,8 +1,5 @@
 language: objective-c
 osx_image: xcode10.1
-xcode_workspace: CISample.xcworkspace
-xcode_scheme: CISample
-xcode_sdk: iphonesimulator
 
 before_install:
 - pod install
@@ -12,4 +9,8 @@ before_install:
 
 branches:
   only:
-    - travisci
+    - fastlane
+
+script:
+  - fastlane adhoc
+ 

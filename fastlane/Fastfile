@@ -13,8 +13,11 @@ platform :ios do
 
   desc "Ad-hoc build"
   lane :adhoc do
-    match(type: "adhoc")
-    gym(export_method: "ad-hoc")
+    match(git_url "https://github.com/opst/ioscertificates",
+          type: "enterprise",
+          app_identifier: "jp.co.opst.CISample",
+          username: "ios-developers-admin@opst.co.jp")
+    gym(export_method: "enterprise")
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
